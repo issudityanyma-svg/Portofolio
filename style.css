@@ -1,0 +1,632 @@
+:root {
+        --bg: #020611;
+        --card: rgba(255, 255, 255, 0.04);
+        --border: rgba(255, 255, 255, 0.08);
+        --text: #ffffff;
+        --text-dim: #94a3b8;
+        --nav-bg: rgba(2, 6, 17, 0.6); 
+    }
+
+    .light-theme {
+        --bg: #f8fafc;
+        --card: rgba(255, 255, 255, 0.9);
+        --border: rgba(0, 0, 0, 0.05);
+        --text: #0f172a;
+        --text-dim: #475569;
+        --nav-bg: rgba(255, 255, 255, 0.7); 
+    }
+
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        transition: all 0.5s ease;
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.4s ease;
+        border-bottom: 1px solid transparent;
+        /* TAMBAHKAN INI: Biar warna teks navbar ikut berubah */
+        color: var(--text); 
+    }
+
+
+    nav.scrolled {
+        background: var(--nav-bg);       
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--border);
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .master-card {
+        background: var(--card);
+        backdrop-filter: blur(40px);
+        border: 1px solid var(--border);
+        border-radius: 60px;
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+         mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
+
+    .name-style {
+        background: linear-gradient(to right, #818cf8, #60a5fa, #c084fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+   
+    .btn-ref {
+    /* Gunakan variabel border agar warnanya adaptif */
+    border: 1px solid rgba(59, 130, 246, 0.5); 
+    background: var(--card);
+    color: var(--text);
+    border-radius: 999px; /* Biar bentuknya kapsul sempurna */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Efek Glow & Warna saat Mode Terang */
+.light-theme .btn-ref {
+    border: 1px solid rgba(37, 99, 235, 0.2); /* Border biru tipis di mode terang */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Shadow halus agar tidak 'hilang' */
+}
+
+.btn-ref:hover {
+    background: #2563eb;
+    color: white !important;
+    border-color: #2563eb;
+    /* Efek glow biru saat di-hover */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.btn-ref span.blue-text {
+    color: #60a5fa;
+    margin-left: 8px;
+}
+    
+
+    /* Animasi Reveal & Scroll (Tetap Sama) */
+    .click-reveal {
+        animation: slideUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+    }
+    @keyframes slideUp {
+        0% { opacity: 0; transform: translateY(40px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .arc {
+        position: absolute; inset: -15px;
+        border: 2px solid rgba(96, 165, 250, 0.3);
+        border-radius: 50%; border-top-color: transparent;
+        animation: spin 10s linear infinite;
+    }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .delay-200 { transition-delay: 200ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+   
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Memberikan jarak otomatis antar judul, paragraf, dan tombol */
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    display: block; 
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Skill: Border lebih tipis & Glassmorphism halus */
+    .skill-card {
+        background: var(--card);
+        /* Border tipis 1px dengan transparansi rendah agar mirip desain */
+        border: 1px solid rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(12px);
+        border-radius: 24px;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Efek saat Hover: Border menyala & sedikit geser */
+    .skill-card:hover {
+        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+        transform: translateX(8px);
+    }
+
+    /* Container Progress Bar */
+    .progress-bg {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 999px;
+        height: 6px; /* Lebih tipis agar modern */
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Warna Gradasi Bar */
+    .progress-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #4f46e5, #3b82f6);
+        border-radius: 999px;
+        transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Efek cahaya pada bar */
+    }
+
+    /* Ikon Wrapper */
+    .icon-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+/* Progress Bar Container */
+.progress-bg {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress Fill dengan Gradient & Animasi */
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #4f46e5, #3b82f6, #60a5fa);
+    width: 0%; /* Mulai dari 0 untuk animasi */
+    transition: width 1.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+/* Khusus Mode Terang */
+.light-theme .progress-bg {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Container Utama Project dengan Cahaya Ambient */
+#projects {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorasi Cahaya di Background */
+.project-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Card Project */
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gambar Project */
+.project-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-card:hover .project-img-container img {
+    transform: scale(1.1);
+}
+
+    .project-glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        filter: blur(120px);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .glow-1 { top: -10%; left: -10%; background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent); }
+    .glow-2 { bottom: -10%; right: -10%; background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent); }
+
+    .project-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    .project-card:hover {
+        transform: translateY(-15px);
+        border-color: rgba(59, 130, 246, 0.5);
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Menghilangkan garis kaku pada gambar */
+    .project-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    /* Efek Fading Smooth */
+    .project-img-wrapper::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(to top, var(--card) 10%, transparent 100%);
+        z-index: 2;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .project-card:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Styling Card */
+    .project-card {
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 32px;
+        transition: all 0.5s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .project-card:hover {
+        transform: translateY(-15px);
+        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Ambient Glow Background */
+    .project-glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        filter: blur(120px);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .glow-1 { top: -10%; left: -10%; background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent); }
+
+    /* --- Styling Section Contact --- */
+#contact {
+    position: relative;
+}
+
+/* Glassmorphism Input Field */
+.input-group-custom {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 14px 20px;
+    color: white;
+    width: 100%;
+    outline: none;
+    transition: all 0.4s ease;
+}
+
+.input-group-custom:focus {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Tombol Kirim Pesan */
+.btn-send {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 999px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Info Item Hover */
+.contact-info-item {
+    transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: translateX(10px);
+}
+
+/* --- CSS CONTACT CLEAN VERSION --- */
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: translateX(10px);
+}
+
+.contact-icon-box {
+    width: 56px;
+    height: 56px;
+    background: rgba(59, 130, 246, 0.15); 
+    border: 1px solid rgba(59, 130, 246, 0.3); 
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon-box i {
+    color: #3b82f6; 
+    font-size: 1.25rem;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+.contact-label {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 10px;
+    font-weight: 700;
+    color: #60a5fa; 
+    margin-bottom: 2px;
+    display: block;
+}
+
+.contact-value {
+    color: #ffffff !important; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 1 !important;
+}
+
+/* Memastikan Master Card tidak ada eror masking */
+.master-card {
+    background: var(--card);
+    backdrop-filter: blur(40px);
+    border: 1px solid var(--border);
+    border-radius: 60px;
+    padding: 40px;
+    position: relative;
+    /* Hapus baris webkit-mask jika masih merah */
+}
+
+/* Styling Input Field agar Tajam & Premium */
+.input-group-custom {
+    background: rgba(255, 255, 255, 0.05); /* Sedikit lebih terang dari background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Border tipis tapi solid */
+    border-radius: 16px;
+    padding: 16px 20px;
+    color: #ffffff !important; /* Teks yang kamu ketik jadi putih solid */
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Warna Placeholder (Tulisan "Your Name", dll) agar tidak terlalu pudar */
+.input-group-custom::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+/* Efek saat kotak diklik (Focus) */
+.input-group-custom:focus {
+    border-color: #3b82f6; /* Berubah jadi biru terang */
+    background: rgba(59, 130, 246, 0.05);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Container Ikon Biru (Samakan dengan Button) */
+.contact-icon-box {
+    width: 56px;
+    height: 56px;
+    background: rgba(59, 130, 246, 0.1); /* Biru sangat halus */
+    border: 1px solid #3b82f6; /* Warna biru solid tombol */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Warna Ikon di dalam Box */
+.contact-icon-box i {
+    color: #3b82f6; /* Sama persis dengan warna tombol */
+    font-size: 1.25rem;
+}
+
+/* Teks Label (Email Me, dll) disamakan nadanya */
+.contact-label {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 10px;
+    font-weight: 700;
+    color: #3b82f6; /* Sekarang warna label juga biru cerah */
+    margin-bottom: 2px;
+}
+
+/* Nilai Utama tetap Putih agar mudah dibaca */
+.contact-value {
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 1 !important;
+}
+
+/* Hover Effect agar interaktif */
+.contact-info-item:hover .contact-icon-box {
+    background: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.contact-info-item:hover .contact-icon-box i {
+    color: white; /* Ikon berubah putih saat di-hover */
+}
+
+/* Warna Ikon di dalam kotak biru */
+.contact-icon-box i {
+    color: #3b82f6 !important; 
+    font-size: 1.25rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container Footer Card */
+.footer-card {
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Garis Atas Biru khas desain kamu */
+.footer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+/* Link Footer Animasi */
+.footer-link {
+    color: var(--text-dim);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #3b82f6;
+    transform: translateX(5px);
+}
+
+/* Ikon Sosial Media */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+/* Tombol Let's Talk */
+.btn-talk {
+    border: 1px solid #3b82f6;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 160px;
+}
+
+.btn-talk:hover {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Text */
+.text-dim {
+    color: var(--text-dim);
+}
