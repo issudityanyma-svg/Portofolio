@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav id="main-nav" class="py-6 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+            <div class="text-2xl font-bold tracking-tighter">
+                NAYMA
+            </div>
+
+            <div class="hidden md:flex space-x-10 text-sm font-medium opacity-80">
+                <a href="#home" class="nav-item hover:text-blue-400 transition">Home</a>
+                <a href="#about" class="nav-item hover:text-blue-400 transition">About</a>
+                <a href="#skil" class="nav-item hover:text-blue-400 transition">Skills</a>
+                <a href="#project" class="nav-item hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="nav-item hover:text-blue-400 transition">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <button id="theme-toggle" class="p-3 border border-white/10 rounded-full hover:bg-white/5 transition">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button id="menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+        </div>
+
+
+        <div id="mobile-menu"
+            class="hidden md:hidden mt-6 rounded-3xl border border-white/10 bg-black/70 backdrop-blur-xl p-6">
+
+            <div class="flex flex-col gap-6 text-sm font-medium">
+
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skil" class="nav-item">Skills</a>
+                <a href="#project" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
+
+            </div>
+        </div>
+    </nav>
+    <main id="home" class="w-full flex flex-col items-center px-6 pt-32">
+        <div
+            class="master-card w-full max-w-7xl p-12 md:p-24 flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+            <div class="flex-1 space-y-8 text-center md:text-left">
+                <h1 class="text-5xl md:text-[75px] font-bold leading-tight">
+                    I Am <span class="name-style">Nayma Alrizky Issuditya</span>
+                </h1>
+                <p class="text-base opacity-80 max-w-2xl">
+                    I build modern, responsive, and visually engaging websites that are not only beautiful but also
+                    functional. Focused on clean UI, smooth user experience, and impactful digital presence.
+                </p>
+                <a href="#project"
+                    class="btn-ref inline-block px-12 py-4 text-xs font-bold uppercase tracking-widest text-center">
+                    View <span class="blue-text">Project</span>
+                </a>
+
+
+            </div>
+            <div class="relative w-64 h-64 md:w-[400px] md:h-[400px] -mt-10 md:-mt-16">
+                <img src="___The_future_of_journalism_is_here__How_will_AI_agents_reshape_the_way_we_consume_news__From_data-driven_insights_to_seamless_reporting__the_blend_of_technology_and_traditional_journalism_is_more_vib.png"
+                    class="floating-profile w-full h-full object-contain drop-shadow-2xl">
+            </div>
+        </div>
+    </main>
+    <section id="about" class="w-full flex justify-center py-40 px-10">
+        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center gap-24">
+
+            <img src="profil2.png" class="reveal w-64 h-64 md:w-[400px] md:h-[400px] rounded-full object-cover">
+
+            <div class="about-content flex-1 text-center md:text-left">
+
+                <div class="reveal delay-200 flex items-center justify-center md:justify-start space-x-3">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span class="text-xs uppercase tracking-widest font-bold opacity-60">About Me</span>
+                </div>
+
+                <h2 class="reveal delay-200 text-5xl md:text-6xl font-bold">
+                    ABOUT <span class="name-style">ME</span>
+                </h2>
+                <div class="about-line"></div>
+                <p class="reveal delay-400 text-lg leading-relaxed opacity-70">
+                    My name is Nayma Alrizky Issuditya, and people usually call me Nayma. I was born and raised in
+                    Central Java, Indonesia. I am currently studying at Tengaran State Vocational High School with a
+                    major in Software Engineering (RPL), where I continue improving my skills in web development and
+                    digital design.
+
+                <p class="reveal delay-400 text-lg leading-relaxed opacity-70">
+                    Besides coding, I also enjoy exploring creative activities such as watching movies, designing
+                    visuals, discovering new places, and capturing moments through photography. These interests help me
+                    stay imaginative, motivated, and open to learning new things. I always enjoy combining creativity
+                    with technology to create modern and meaningful digital experiences.
+
+                </p>
+
+                <div class="reveal delay-400 pt-4">
+                    <a href="Dark Blue Modern Futuristic Technology Presentation (1).pdf" target="_blank"
+                        class="btn-ref inline-block px-10 py-4 text-xs font-bold uppercase tracking-widest standard-button">
+                        My Experience <span class="blue-text">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="skil" class="py-24 px-6 flex justify-center">
+        <div class="w-full max-w-5xl">
+            <div class="reveal mb-12 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase opacity-50">My Skills</span>
+                </div>
+                <h2 class="text-5xl font-extrabold tracking-tight">SKILLS<span class="text-blue-500">.</span></h2>
+                <div class="skill-line"></div>
+            </div>
+
+            <div class="grid gap-4">
+                <div class="skill-card reveal p-5 flex flex-col md:flex-row items-center gap-6">
+                    <div class="icon-box w-16 h-16 flex-shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            class="w-9 h-9">
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-end mb-3">
+                            <div>
+                                <h4 class="font-bold text-lg">HTML</h4>
+                                <p class="text-sm opacity-40">Creating clean and structured web pages.</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-400">95%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" data-percent="95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal delay-200 p-5 flex flex-col md:flex-row items-center gap-6">
+                    <div class="icon-box w-16 h-16 flex-shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            class="w-9 h-9">
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-end mb-3">
+                            <div>
+                                <h4 class="font-bold text-lg">CSS</h4>
+                                <p class="text-sm opacity-40">Designing modern and responsive layouts.</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-400">80%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" data-percent="80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal p-5 flex flex-col md:flex-row items-center gap-6">
+                    <div class="icon-box w-16 h-16 flex-shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            class="w-9 h-9">
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-end mb-3">
+                            <div>
+                                <h4 class="font-bold text-lg">JAVASCRIPT</h4>
+                                <p class="text-sm opacity-40">Building interactive website experiences.</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-400">60%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" data-percent="60%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal delay-200 p-5 flex flex-col md:flex-row items-center gap-6">
+                    <div class="icon-box w-16 h-16 flex-shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            class="w-9 h-9">
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-end mb-3">
+                            <div>
+                                <h4 class="font-bold text-lg">BOOTSTRAP</h4>
+                                <p class="text-sm opacity-40">Developing fast and responsive websites.</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-400">85%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" data-percent="85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal p-5 flex flex-col md:flex-row items-center gap-6">
+                    <div class="icon-box w-16 h-16 flex-shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                            class="w-9 h-9">
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-end mb-3">
+                            <div>
+                                <h4 class="font-bold text-lg">FIGMA</h4>
+                                <p class="text-sm opacity-40">Designing modern UI/UX prototypes.</p>
+                            </div>
+                            <span class="text-sm font-bold text-blue-400">85%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" data-percent="85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="py-32 px-6 relative overflow-hidden">
+        <div class="project-glow glow-1 opacity-50"></div>
+        <div class="project-glow glow-2 opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="reveal mb-20 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-2 mb-3">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase opacity-50">PROJECT</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black uppercase">My<span class="text-blue-500">Projects</span></h2>
+                <div class="project-line"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8">
+
+                <a href="https://okta31224-jpg.github.io/kolaborasi-website/" target="_blank"
+                    class="project-card reveal w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="project-img-wrapper rounded-t-[32px]">
+                        <img src="web 1.jpeg" alt="Environmental Website">
+                    </div>
+                    <div class="p-8 relative z-10 -mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Recycle Website</h3>
+                        <p class="text-sm opacity-40 mb-8 leading-relaxed">A modern environmental awareness website
+                            focused on ocean conservation.</p>
+                        <div class="btn-ref w-full py-3 text-center text-xs font-bold uppercase tracking-widest">View
+                            Web</div>
+                    </div>
+                </a>
+
+                <a href="https://issudityanyma-svg.github.io/TUGAS2-Bootstrap/" target="_blank"
+                    class="project-card reveal delay-200 w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="project-img-wrapper rounded-t-[32px]">
+                        <img src="WEB 2.png" alt="School Website">
+                    </div>
+                    <div class="p-8 relative z-10 -mt-6">
+                        <h3 class="text-2xl font-bold mb-2">School Website</h3>
+                        <p class="text-sm opacity-40 mb-8 leading-relaxed">A modern educational website with responsive
+                            layouts and clean navigation.</p>
+                        <div class="btn-ref w-full py-3 text-center text-xs font-bold uppercase tracking-widest">View
+                            Web</div>
+                    </div>
+                </a>
+
+                <a href="https://issudityanyma-svg.github.io/TUGAS3-Bootstrap/" target="_blank"
+                    class="project-card reveal delay-400 w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="project-img-wrapper rounded-t-[32px]">
+                        <img src="WEB 3.png" alt="Environmental Website 2">
+                    </div>
+                    <div class="p-8 relative z-10 -mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Environmental Website</h3>
+                        <p class="text-sm opacity-40 mb-8 leading-relaxed">An eco-friendly website promoting
+                            environmental awareness with fresh visuals.</p>
+                        <div class="btn-ref w-full py-3 text-center text-xs font-bold uppercase tracking-widest">View
+                            Web</div>
+                    </div>
+                </a>
+
+                <a href="https://issudityanyma-svg.github.io/Tugas4/" target="_blank"
+                    class="project-card reveal w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="project-img-wrapper rounded-t-[32px]">
+                        <img src="WEB 4.png" alt="Travel Landing Page">
+                    </div>
+                    <div class="p-8 relative z-10 -mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Travel Landing Page</h3>
+                        <p class="text-sm opacity-40 mb-8 leading-relaxed">Easy planning for your dream adventures with
+                            responsive layouts and clean navigation.</p>
+                        <div class="btn-ref w-full py-3 text-center text-xs font-bold uppercase tracking-widest">View
+                            Web</div>
+                    </div>
+                </a>
+
+                <a href="https://issudityanyma-svg.github.io/Tugas5/" target="_blank"
+                    class="project-card reveal delay-200 w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="project-img-wrapper rounded-t-[32px]">
+                        <img src="WEB 5.png" alt="E-commerce Website">
+                    </div>
+                    <div class="p-8 relative z-10 -mt-6">
+                        <h3 class="text-2xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-sm opacity-40 mb-8 leading-relaxed">A stylish e-commerce interface with
+                            user-friendly navigation and modern shopping experience.</p>
+                        <div class="btn-ref w-full py-3 text-center text-xs font-bold uppercase tracking-widest">View
+                            Web</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-24 md:py-32 px-5 md:px-6 relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <div class="flex flex-col lg:flex-row gap-14 lg:gap-24 items-start">
+
+                <!-- LEFT -->
+                <div class="w-full lg:w-1/3 reveal">
+
+                    <div class="flex items-center gap-2 mb-3 justify-center lg:justify-start">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase opacity-50">
+                            Let's Connect
+                        </span>
+                    </div>
+
+                    <h2
+                        class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 uppercase text-center lg:text-left leading-tight">
+                        Get In <span class="text-blue-500">Touch</span>
+                    </h2>
+
+                    <div class="contact-line mx-auto lg:mx-0"></div>
+
+                    <div class="space-y-6 md:space-y-8 mt-10">
+
+                        <div class="contact-info-item flex items-start gap-4 md:gap-5">
+                            <div class="contact-icon-box shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <p class="contact-label">Email Me</p>
+                                <p class="contact-value break-all">
+                                    issudityanyma@gmail.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item flex items-start gap-4 md:gap-5">
+                            <div class="contact-icon-box shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">
+                                    Salatiga, Jawa Tengah
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item flex items-start gap-4 md:gap-5">
+                            <div class="contact-icon-box shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">
+                                    +62 85601181740
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="w-full lg:w-2/3 reveal delay-300">
+
+                    <div class="master-card contact-card p-6 sm:p-8 md:p-12">
+
+                        <form action="#" class="space-y-5 md:space-y-6">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                                <input type="text" placeholder="Your Name" class="input-group-custom">
+
+                                <input type="email" placeholder="Your Email" class="input-group-custom">
+                            </div>
+
+                            <input type="text" placeholder="Subject" class="input-group-custom">
+
+                            <textarea rows="5" placeholder="Your Message"
+                                class="input-group-custom resize-none"></textarea>
+
+                            <div class="pt-2 md:pt-4">
+                                <button type="submit" class="btn-send w-full sm:w-auto">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="relative pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="footer-card p-10 md:p-16 mb-12 reveal">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-black tracking-tighter logo">NAYMA</h2>
+                        <p class="text-dim text-sm leading-relaxed max-w-xs">
+                            Designing beautiful digital experiences that help brands grow and connect.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="https://share.google/UOT2XW1yReLoJnEFO" target="_blank" class="social-icon"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://share.google/8IRXEA0w9mpNft8sf" target="_blank" class="social-icon"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="https://share.google/uOfLQRMJBPGzIgCMS" target="_blank" class="social-icon"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://share.google/qLRHyME93Ddtq42yZ" target="_blank" class="social-icon"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
+                        <ul class="space-y-4">
+                            <li><a href="#home" class="footer-link">Home</a></li>
+                            <li><a href="#about" class="footer-link">About</a></li>
+                            <li><a href="#skills" class="footer-link">Skills</a></li>
+                            <li><a href="#projects" class="footer-link">Projects</a></li>
+                            <li><a href="#contact" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Services</h4>
+                        <ul class="space-y-4">
+                            <li class="text-dim text-sm">UI/UX Design</li>
+                            <li class="text-dim text-sm">Web Design</li>
+                            <li class="text-dim text-sm">Prototyping</li>
+                            <li class="text-dim text-sm">Branding</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs">Let's Connect</h4>
+                        <p class="text-dim text-sm">Let's build something great together.</p>
+                        <a href="mailto:issudityanyma@gmail.com"
+                            class="btn-talk flex items-center justify-between group">
+                            <span>Let's Talk</span>
+                            <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-dim text-xs tracking-widest uppercase">
+                    © 2026 Nayma. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
